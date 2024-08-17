@@ -1,0 +1,27 @@
+.appbar__container {
+   background-color: #ff6600; 
+}
+
+.toolbar__container {
+    padding: 0px 16px !important;
+    display: flex;
+}
+
+.logo__container {
+    /* align items in center */
+    display: flex;
+    align-items: center;
+}
+
+.tools_container {
+    /* align items in center */
+    display: flex;
+    align-items: center;
+
+
+    margin-left: auto !important;
+
+
+    /* junk */
+    height: 50px;
+}
