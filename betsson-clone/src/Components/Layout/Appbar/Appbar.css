@@ -3,8 +3,13 @@
 }
 
 .toolbar__container {
-    padding: 0px 16px !important;
+    padding: 3px 16px 0px !important;
     display: flex;
+}
+
+.navigation__container {
+    padding: 0px 6px !important;
+    /* display: flex; */
 }
 
 .logo__container {
@@ -17,11 +22,80 @@
     /* align items in center */
     display: flex;
     align-items: center;
-
+    gap: 15px;
 
     margin-left: auto !important;
 
 
     /* junk */
     height: 50px;
+}
+
+.tool__button {
+    background-color: #ce570a !important;
+    height: 40px;
+    width: 40px;
+    color: #ffffff !important;
+    font-size: 14px !important;
+}
+
+.tool__button:hover {
+    background-color: #e6610b !important;
+}
+
+.tool__button_icon {
+    color: #ffffff !important;
+}
+
+.tool__button__sign {
+    text-transform: none !important;
+    height: 36px;
+    padding: 16px !important;
+}
+
+.sign__in__button {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.sign__up__button {
+    background-color: #40b840 !important;
+    box-shadow: none !important;
+}
+
+.sign__in__button:hover {
+    background-color: #ff751a !important;
+}
+
+.sign__up__button:hover {
+    background-color: #50c250 !important;
+}
+
+.appbar__wrapper {
+   background-color: #ff6600 !important;
+   box-shadow: none !important;  
+}
+
+.appbar__menu_button {
+    padding: 0px 10px !important;
+    height: 40px !important;
+}
+
+.appbar__menu__container {
+    /* padding: 0px !important; */
+   height: 40px !important;
+   font-weight: bold !important;
+   color: #40b840 !important;
+
+}
+
+.appbar__menu__toolbar {
+    min-height: 0px !important;
+    height: 40px !important;
+}
+
+.appbar__menu__text {
+    font-family: 'Open Sans', Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
 }
