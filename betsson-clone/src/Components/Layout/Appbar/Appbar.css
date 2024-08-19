@@ -79,6 +79,13 @@
 .appbar__menu_button {
     padding: 0px 10px !important;
     height: 40px !important;
+
+    border-radius: 0 !important;
+}
+
+.appbar__menu_button:hover {
+    border-radius: 0 !important;
+    background-color: #ff8533 !important;
 }
 
 .appbar__menu__container {
