@@ -1,0 +1,56 @@
+.homepage__banner__container {
+    background-image: url('../../Assets/Images/banner_desktop.jpg');
+    background-size: cover;
+    background-position: center;
+
+    font-family: 'Open Sans', Arial, sans-serif !important;
+
+}
+
+.homepage__banner__content_wrapper {
+    min-height: 384px;
+    max-width: 1190px;
+
+    margin: auto !important;
+
+    padding: 40px 0px !important;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.homepage__banner__text {
+    color: white;
+    font-size: 17px;
+}
+
+.homepage__banner__title {
+    color: white;
+    max-width: 586px;
+
+    line-height: 1.5;
+    
+    font-family: 'Open Sans', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.homepage__banner__signup__form__container {
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    height: 100px !important;
+
+    padding: 20px !important;
+}
+
+
+.homepage__textfield {
+    height: 100px !important;
+}
+
+.homepage__textfield:focus {
+    border-color: blueviolet !important;
+}
