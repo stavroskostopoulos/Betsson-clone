@@ -1,3 +1,11 @@
+
+.homepage__container {
+    background-color: #f9f9f9;
+    
+}
+
+/* Banner */
+
 .homepage__banner__container {
     background-image: url('../../Assets/Images/banner_desktop.jpg');
     background-size: cover;
@@ -82,3 +90,52 @@
     height: 30px;
     width: auto;
 }
+
+/* MainContent */
+
+.homepage__main__content__container {
+
+    height: 200px;
+    max-width: 1190px;
+
+    margin: auto !important;
+    padding: 16px 0px !important;
+}
+
+.homepage__promo__cards__container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+}
+
+.homepage__promo__title__wrapper {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.homepage__promo__title {
+    font-family: 'Open Sans', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+
+    font-size: 26px;
+    font-weight: 700 !important;
+
+    color: #212121;
+}
+
+.homepage__promo__button {
+    margin-left: auto !important;
+
+    color: #ff6600 !important;
+    border-color: #ff6600 !important;
+
+    text-transform: none !important;
+
+    font-weight: bold !important;
+    font-size: 12px !important;
+    padding: 8px 16px !important;
+}
+
+
