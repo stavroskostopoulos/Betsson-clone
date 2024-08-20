@@ -1,0 +1,45 @@
+.card__with__info {
+    background-image: url("https://cdnroute.bpsgameserver.com/v3/bgr/Betsson.GR/Common/el/image/2024/06/4383e9bc8504483fa02dc64163612543.jpg");
+    
+    height: 248px !important;
+    width: 225px !important;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: flex-end;
+
+}
+
+
+.card__info__container {
+    height: 60px;
+    width: 100%;
+
+    background-color: #020d48 !important;
+    opacity: 90%;
+    border-radius: 0px 0px 8px 8px !important;
+    
+    padding: 16px !important;
+
+    color: white;
+}
+
+.card__info__text {
+    color: white;
+    opacity: 100%;
+
+    font-weight: 700 !important;
+    font-size: 11px;
+}
+
+.card__info__title {
+    font-weight: 700 !important;
+    font-size: 14px;
+}
+
+.homepage__promo__card__carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}

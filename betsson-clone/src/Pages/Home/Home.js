@@ -2,6 +2,8 @@ import React from 'react';
 import './Home.css';
 
 // Import media
+
+// 1) bank media
 import { ReactComponent as Bank1 } from '../../Assets/Images/BankIcons/1.svg';
 import { ReactComponent as Bank3 } from '../../Assets/Images/BankIcons/3.svg';
 import { ReactComponent as Bank4 } from '../../Assets/Images/BankIcons/4.svg';
@@ -11,10 +13,18 @@ import { ReactComponent as Bank7 } from '../../Assets/Images/BankIcons/7.svg';
 import Bank2img from '../../Assets/Images/BankIcons/2.png';
 import Bank8img from '../../Assets/Images/BankIcons/8.png';
 
+// 2) cards media
+
+
+
 // Material UI components
 import { Typography } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+
+// Import custom Components
+import CardWithInfo from '../../Components/Common/CardWithInfo/CardWithInfo';
+
 
 const textfieldStyling = {
 	'& label.Mui-focused': {
@@ -108,6 +118,30 @@ function Home() {
 					</div>
 
 				</div>
+
+			</div>
+
+
+			<div className='homepage__main__content__container'>
+				
+				<div className='homepage__promo__cards__container'>
+					
+					<div className='homepage__promo__title__wrapper'>
+						<Typography variant='h2' className='homepage__promo__title'>Προσφορές</Typography>
+						<Button variant='outlined' className='homepage__promo__button' size='medium'>ΜΕΤΑΒΑΣΗ ΣΤΙΣ ΠΡΟΣΦΟΡΕΣ</Button>
+					</div>
+
+
+					<div className='homepage__promo__card__carousel'>
+						<CardWithInfo />
+						<CardWithInfo />
+						<CardWithInfo />
+						<CardWithInfo />
+						<CardWithInfo />
+					</div>
+					
+				</div>
+
 
 			</div>
 	
