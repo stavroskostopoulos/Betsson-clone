@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import useFetch from '../../Components/Hooks/useFetch';
+
 import './Home.css';
 
 // Import media
@@ -59,8 +61,23 @@ const textfieldStyling = {
 };
 
 function Home() {
+	//let's grab some photos from the original website, so we can combine it with the data we fetch
+	const photoUrl = [
+		'https://cdnroute.bpsgameserver.com/v3/bgr/Betsson.GR/Common/el/image/2024/06/4383e9bc8504483fa02dc64163612543.jpg',
+		'https://cdnroute.bpsgameserver.com/v3/bgr/Betsson.GR/Common/el/image/2024/06/5004b414d4724d8c92ef3cb9abefae18.jpg',
+		'https://cdnroute.bpsgameserver.com/v3/bgr/Betsson.GR/Common/el/image/2024/08/4e779d949e8941579f420bd753096d1c.jpg',
+		'https://cdnroute.bpsgameserver.com/v3/bgr/Betsson.GR/Common/el/image/2024/06/3513ed0b409e4c7d8697d440df207e17.jpg',
+		'https://cdnroute.bpsgameserver.com/v3/bgr/Betsson.GR/Common/el/image/2024/07/b3a757292dfc4d3dbd23e76d1612f4e4.png'
+	]
 
+	
+	const {data, isLoading, error} = useFetch('https://66c613ac134eb8f43496ae94.mockapi.io/betsson/api/prosfores');
+	
+	const combinedData = data.map((item, index) => {
+			return {...item, photo: photoUrl[index]};
+		});
 
+	console.log(combinedData);
 
 	return (
 		<div className='homepage__container'>
@@ -133,16 +150,27 @@ function Home() {
 
 
 					<div className='homepage__promo__card__carousel'>
-						<CardWithInfo />
-						<CardWithInfo />
-						<CardWithInfo />
-						<CardWithInfo />
-						<CardWithInfo />
+						{!isLoading && combinedData.map((item) => (
+								<CardWithInfo key={item.id} cardText={item.textDesc} cardPhoto={item.photo}/>
+							))
+						}
 					</div>
+
+					<Typography variant='body1' className='homepage__promo__terms__text'>*Ισχύουν όροι και προϋποθέσεις</Typography>
 					
 				</div>
 
-
+				<div className='homepage__inter__sponsor__container'>
+					<div className='homepage__inter__sponsor__image'>
+						<div className='homepage__inter__sponsor__content__wrapper'>
+							<Typography variant='h2' className='homepage__inter__sponsor__text homepage__inter__sponsor__title'>Επίσημος Μεγάλος Χορηγός της Ίντερ!</Typography>
+							<Typography variant='h4' className='homepage__inter__sponsor__text homepage__inter__sponsor__subtitle'>Για 4 χρόνια!</Typography>
+							<Button variant='contained' color='success' className='inter__sponsor__button' size='medium'>ΠΕΡΙΣΣΟΤΕΡΑ</Button>                
+							
+						</div>
+					</div>
+				</div>
+			
 			</div>
 	
 				
