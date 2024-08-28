@@ -114,6 +114,7 @@
     display: flex;
     flex-direction: row;
 
+    align-items: center !important;
 }
 
 .homepage__promo__title {
@@ -197,4 +198,25 @@
 
 .inter__sponsor__button:hover {
     background-color: #50c250 !important;
+}
+
+.homepage__casino__cards__container {
+    padding: 16px 0px !important;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.homepage__casino__cards__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.homepage__casino__slider__container {
+    overflow-x: auto;
+    white-space: nowrap;
+
+    padding-bottom: 17px !important;
 }

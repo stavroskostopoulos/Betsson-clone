@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+
+//custom Hooks
 import useFetch from '../../Components/Hooks/useFetch';
 
 import './Home.css';
@@ -26,7 +28,7 @@ import Button from '@mui/material/Button';
 
 // Import custom Components
 import CardWithInfo from '../../Components/Common/CardWithInfo/CardWithInfo';
-
+import CardWithTitleProvider from '../../Components/Common/CardWithTitleProvider/CardWithTitleProvider';
 
 const textfieldStyling = {
 	'& label.Mui-focused': {
@@ -77,7 +79,11 @@ function Home() {
 			return {...item, photo: photoUrl[index]};
 		});
 
-	console.log(combinedData);
+
+	const {data: casinoData, isLoading: isLoadingCasino, error: errorCasino} = useFetch('https://66c613ac134eb8f43496ae94.mockapi.io/betsson/api/casino');
+	
+	// console.log(combinedData);
+	// console.log(casinoData);
 
 	return (
 		<div className='homepage__container'>
@@ -169,6 +175,22 @@ function Home() {
 							
 						</div>
 					</div>
+				</div>
+				 
+				<div className='homepage__casino__cards__container'>
+					<div className='homepage__promo__title__wrapper'>
+						<Typography variant='h2' className='homepage__promo__title'>Casino</Typography>
+						<Button variant='outlined' className='homepage__promo__button' size='medium'>ΕΜΦΑΝΙΣΗ ΟΛΩΝ</Button>
+ 					</div>
+
+					<div className='homepage__casino__slider__container'>
+						<div className='homepage__casino__cards__wrapper'>
+							{!isLoadingCasino && casinoData.map((item, index) => (
+								<CardWithTitleProvider key={index} title={item.title} provider={item.provider} photo={item.image}/>
+							))}
+						</div>
+					</div>
+
 				</div>
 			
 			</div>

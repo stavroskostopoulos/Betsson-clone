@@ -8,8 +8,6 @@ import { Typography } from '@mui/material';
 
 function CardWithInfo({cardText, cardPhoto}) {
 
-    console.log(cardPhoto)
-
     return (
         <div className='card__with__info' style={{backgroundImage: `url(${cardPhoto})`}}>
             <div className='card__info__container'>
