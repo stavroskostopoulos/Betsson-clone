@@ -14,12 +14,24 @@
 
 .card__with__titleprovider {
     border-radius: 8px;
-    height: 185px;
-    width: 185px;
+    /* height: 185px;
+    width: 185px; */
 
     background-position: center !important;
 
     cursor: pointer;
+}
+
+.card__with__titleprovider__small {
+    height: 185px;
+    width: 185px;
+}
+
+.card__with__titleprovider__wide {
+    height: 160px;
+    width: 285px;
+
+    background-size: contain !important;
 }
 
 .card__with__titleprovider__title {

@@ -72,7 +72,7 @@ function Home() {
 		'https://cdnroute.bpsgameserver.com/v3/bgr/Betsson.GR/Common/el/image/2024/07/b3a757292dfc4d3dbd23e76d1612f4e4.png'
 	]
 
-	
+	//Fetch some random town names to use in prosfores cards 
 	const {data, isLoading, error} = useFetch('https://66c613ac134eb8f43496ae94.mockapi.io/betsson/api/prosfores');
 	
 	const combinedData = data.map((item, index) => {
@@ -80,8 +80,16 @@ function Home() {
 		});
 
 
+	//Fetch the promoted casino data
 	const {data: casinoData, isLoading: isLoadingCasino, error: errorCasino} = useFetch('https://66c613ac134eb8f43496ae94.mockapi.io/betsson/api/casino');
 	
+	//Fetch the promoted live casino data
+	const {data: liveCasinoData, isLoading: isLoadingLiveCasino, error: errorLiveCasino} = useFetch('https://66d07416181d059277dea91c.mockapi.io/livecasino');
+	
+	//Fetch the promoted betting data
+	const {data: bettingData, isLoading: isLoadingBetting, error: errorBetting} = useFetch('https://66d07416181d059277dea91c.mockapi.io/betting');
+	
+
 	// console.log(combinedData);
 	// console.log(casinoData);
 
@@ -193,6 +201,39 @@ function Home() {
 
 				</div>
 			
+				<div className='homepage__live__casino__cards__container'>
+					<div className='homepage__promo__title__wrapper'>
+						<Typography variant='h2' className='homepage__promo__title'>Live Casino</Typography>
+						<Button variant='outlined' className='homepage__promo__button' size='medium'>ΕΜΦΑΝΙΣΗ ΟΛΩΝ</Button>
+ 					</div>
+
+					<div className='homepage__casino__slider__container'>
+						<div className='homepage__live__casino__card__carousel'>
+							{!isLoadingLiveCasino && liveCasinoData.map((item, index) => (
+									<CardWithTitleProvider key={index} title={item.title} provider={item.provider} photo={item.image} size='wide'/>
+							))}
+						</div>
+					</div>	
+
+				</div>
+
+				<div className='homepage__betting__cards__container'>
+					<div className='homepage__promo__title__wrapper'>
+						<Typography variant='h2' className='homepage__promo__title'>Στοίχημα</Typography>
+						<Button variant='outlined' className='homepage__promo__button' size='medium'>ΕΜΦΑΝΙΣΗ ΟΛΩΝ</Button>
+ 					</div>
+
+					<div className='homepage__casino__slider__container'>
+						<div className='homepage__casino__cards__wrapper'>
+							{!isLoadingBetting && bettingData.map((item, index) => (
+								<CardWithTitleProvider key={index} title={item.title} provider={item.provider} photo={item.image}/>
+							))}
+						</div>
+					</div>
+
+				</div>
+				
+
 			</div>
 	
 				

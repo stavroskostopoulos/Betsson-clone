@@ -200,7 +200,9 @@
     background-color: #50c250 !important;
 }
 
-.homepage__casino__cards__container {
+.homepage__casino__cards__container, 
+.homepage__live__casino__cards__container, 
+.homepage__betting__cards__container {
     padding: 16px 0px !important;
 
     display: flex;
@@ -219,4 +221,10 @@
     white-space: nowrap;
 
     padding-bottom: 17px !important;
+}
+
+.homepage__live__casino__card__carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
 }
