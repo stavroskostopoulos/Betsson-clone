@@ -202,7 +202,8 @@
 
 .homepage__casino__cards__container, 
 .homepage__live__casino__cards__container, 
-.homepage__betting__cards__container {
+.homepage__betting__cards__container,
+.homepage__pros__cards__container {
     padding: 16px 0px !important;
 
     display: flex;
@@ -227,4 +228,147 @@
     display: flex;
     flex-direction: row;
     gap: 16px;
+}
+
+
+.homepage__pros__card__one,
+.homepage__pros__card__two,
+.homepage__pros__card__three {
+    background-color: #fff !important;
+
+    border-radius: 8px;
+
+    padding: 16px !important;
+
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-self: stretch !important;
+    gap: 24px;
+}
+
+.homepage__pros__card__three {
+    gap: 8px !important;
+}
+
+.homepage__pros__cards__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+    
+}
+
+.homepage__pros__card__title {
+    color: #212121 !important;
+    
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    font-family: 'Open Sans', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+
+}
+
+.homepage__pros__card__text {
+    color: #666666 !important;
+
+    font-size: 14px !important;
+    font-weight: 100;
+    font-family: 'Open Sans', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+
+    margin-top: 4px !important;
+}
+
+.homepage__link {
+    color: #ff6600 !important;
+}
+
+.homepage__link:hover {
+    cursor: pointer;
+}
+
+.homepage__pros__tooltip__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.homepage__pros__tooltip__title {
+    color: #666666 !important;
+
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    font-family: 'Open Sans', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+
+}
+
+.homepage__pros__tooltip__text {
+    color: #666666 !important;
+    
+    font-size: 16px !important;
+    font-weight: 700 !important;
+
+}
+
+.homepage__pros__tooltip__text__wrapper {
+    display: flex;
+    flex-direction: row; 
+    gap: 8px;  
+}
+
+.homepage__pros__tooltip__icon {
+    color: #9e9e9e !important;
+}
+
+.homepage__pros__payment__options__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap !important;
+    row-gap: 16px !important;
+    gap: 10px;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.homepage__reassurance__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 20px 0px !important;
+}
+
+.homepage__reassurance__icons__container {
+    margin: 24px !important;
+}
+
+.homepage__reassurance__text__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.homepage__reassurance__text {
+    color: #212121 !important;
+    font-family: 'Open Sans', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+
+    font-size: 16px;
+}
+
+.homepage__reassurance__link {
+    color: #ff6600 !important;
+
+    font-size: 14px !important;
+    font-family: 'Open Sans', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+
+}
+
+.homepage__reassurance__link:hover {
+    cursor: pointer;
+}
+
+.homepage__reassurance__icons__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }

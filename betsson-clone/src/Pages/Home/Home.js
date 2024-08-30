@@ -17,14 +17,22 @@ import { ReactComponent as Bank7 } from '../../Assets/Images/BankIcons/7.svg';
 import Bank2img from '../../Assets/Images/BankIcons/2.png';
 import Bank8img from '../../Assets/Images/BankIcons/8.png';
 
-// 2) cards media
-
-
+// 2) Payment Options Media
+import { ReactComponent as PayOpt1 } from '../../Assets/Images/PaymentOptionIcons/1.svg'
+import { ReactComponent as PayOpt2 } from '../../Assets/Images/PaymentOptionIcons/2.svg'
+import { ReactComponent as PayOpt3 } from '../../Assets/Images/PaymentOptionIcons/3.svg'
+import { ReactComponent as PayOpt4 } from '../../Assets/Images/PaymentOptionIcons/4.svg'
+import { ReactComponent as PayOpt5 } from '../../Assets/Images/PaymentOptionIcons/5.svg'
+import { ReactComponent as PayOpt6 } from '../../Assets/Images/PaymentOptionIcons/6.svg'
+import { ReactComponent as PayOpt7 } from '../../Assets/Images/PaymentOptionIcons/7.svg'
+import { ReactComponent as PayOpt8 } from '../../Assets/Images/PaymentOptionIcons/8.svg'
 
 // Material UI components
 import { Typography } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import ErrorIcon from '@mui/icons-material/Error';
+import Tooltip from '@mui/material/Tooltip';
 
 // Import custom Components
 import CardWithInfo from '../../Components/Common/CardWithInfo/CardWithInfo';
@@ -139,13 +147,13 @@ function Home() {
 					
 					<div className='homepage__banner__bank__icons__container'>
 						<Bank1 className='homepage__banner__bank__icons'/>
-						<img src={Bank2img} className='homepage__banner__bank__icons'/>
+						<img src={Bank2img} alt='visa' className='homepage__banner__bank__icons'/>
 						<Bank3 className='homepage__banner__bank__icons'/>
 						<Bank4 className='homepage__banner__bank__icons'/>
 						<Bank5 className='homepage__banner__bank__icons'/>
 						<Bank6 className='homepage__banner__bank__icons' />
 						<Bank7 className='homepage__banner__bank__icons'/>
-						<img src={Bank8img} className='homepage__banner__bank__icons'/>
+						<img src={Bank8img} alt='apple pay' className='homepage__banner__bank__icons'/>
 					</div>
 
 				</div>
@@ -229,6 +237,91 @@ function Home() {
 								<CardWithTitleProvider key={index} title={item.title} provider={item.provider} photo={item.image}/>
 							))}
 						</div>
+					</div>
+
+				</div>
+
+				<div className='homepage__pros__cards__container'>
+
+					<Typography variant='h2' className='homepage__promo__title'>Γιατί να παίξετε με έμας;</Typography>
+					
+					
+					<div className='homepage__pros__cards__wrapper'>
+					
+						<div className='homepage__pros__card__one'>
+							<div className='homepage__pros__card__description__wrapper'>
+								<Typography variant='h5' className='homepage__pros__card__title'>Άμεσες καταθέσεις και αναλήψεις</Typography>
+								<Typography variant='body1' className='homepage__pros__card__text'>Παίζεις με ασφάλεια και αξιοπιστία και παίρνεις τα κέρδη σου σε χρόνο ρεκόρ.</Typography>
+							</div>
+							<div className='homepage__pros__tooltip__container'>
+								<div className='homepage__pros__tooltip__wrapper'>
+									<Typography variant='body1' className='homepage__pros__tooltip__title'>Μέσος χρόνος κατάθεσης:</Typography>
+									<div className='homepage__pros__tooltip__text__wrapper'>
+									
+										<Typography variant='body1' className='homepage__pros__tooltip__text'>1 λεπτό</Typography>
+										<Tooltip title="Η τιμή αυτή υπολογίζεται ως μέσος όρος για 12 μήνες δραστηριότητας πελάτη και αποτελεί μέτρο του χρόνου που μεσολαβεί από τη στιγμή υποβολής μιας κατάθεσης έως ότου το υπόλοιπο να γίνει διαθέσιμο στον ιστότοπο." placement="bottom-end">
+											<ErrorIcon className='homepage__pros__tooltip__icon'/>
+										</Tooltip>
+									</div>
+								</div>
+
+								<div className='homepage__pros__tooltip__wrapper'>
+									<Typography variant='body1' className='homepage__pros__tooltip__title'>Μέσος χρόνος πραγματοποίησης ανάληψης:</Typography>
+									<div className='homepage__pros__tooltip__text__wrapper'>
+										<Typography variant='body1' className='homepage__pros__tooltip__text'>2 ώρες</Typography>
+										<Tooltip title="Η τιμή αυτή υπολογίζεται ως μέσος όρος για 12 μήνες δραστηριότητας πελάτη και αποτελεί μέτρο του χρόνου που μεσολαβεί από τη στιγμή υποβολής μιας κατάθεσης έως ότου το υπόλοιπο να γίνει διαθέσιμο στον ιστότοπο." placement="bottom-end">
+											<ErrorIcon className='homepage__pros__tooltip__icon'/>
+										</Tooltip>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+
+						<div className='homepage__pros__card__two'>
+							<div className='homepage__pros__card__description__wrapper'>
+								<Typography variant='h5' className='homepage__pros__card__title'>Πολλαπλές μέθοδοι πληρωμής</Typography>
+								<Typography variant='body1' className='homepage__pros__card__text'>Μεγάλη ποικιλία από μεθόδους κατάθεσης και ανάληψης, για άμεσες και ασφαλείς συναλλαγές.</Typography>
+							</div>
+
+							<div className='homepage__pros__payment__options__container'>
+								<PayOpt1 className='homepage__pro__payment__options__icon'/>
+								<PayOpt2 className='homepage__pro__payment__options__icon'/>
+								<PayOpt3 className='homepage__pro__payment__options__icon'/>
+								<PayOpt4 className='homepage__pro__payment__options__icon'/>
+								<PayOpt5 className='homepage__pro__payment__options__icon'/>
+								<PayOpt6 className='homepage__pro__payment__options__icon'/>
+								<PayOpt7 className='homepage__pro__payment__options__icon'/>
+								<PayOpt8 className='homepage__pro__payment__options__icon'/>
+							</div>
+						</div>
+
+						<div className='homepage__pros__card__three'>
+							<div className='homepage__pros__card__description__wrapper'>
+								<Typography variant='h5' className='homepage__pros__card__title'>Εξυπηρέτηση Πελατών</Typography>
+								<Typography variant='body1' className='homepage__pros__card__text'>Είμαστε πάντα δίπλα σου για να σε βοηθήσουμε σε o,τι χρειαστείς. Μπορείς να επικοινωνήσεις με την εξυπηρέτηση πελατών μέσω Live Chat, e-mail ή ζητώντας να σε καλέσουμε πίσω. <a className='homepage__link'>Εξυπηρέτηση Πελατών</a></Typography>
+							</div>
+
+							<div className='homepage__pros__card__details__wrapper'>
+								<Typography variant='body1' className='homepage__pros__tooltip__title'>Μέσος χρόνος πραγματοποίησης ανάληψης:</Typography>
+								<Typography variant='body1' className='homepage__pros__tooltip__text'>2 ώρες</Typography>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div className='homepage__reassurance__container'>
+					<div className='homepage__reassurance__icons__container'>
+						<img src="https://cdnroute.bpsgameserver.com/v3/bgr/Betsson.GR/Common/el/image/2023/07/268fd2d23a9f40f59972686d3f6c9d1c.jpg" alt="HGC"/>
+						<img src="https://cdnroute.bpsgameserver.com/v3/bgr/Betsson.GR/Common/el/image/2023/02/93b547ca617442f28e9b62f7c38a03f8.svg" alt="21+"/>
+						<img src="https://cdnroute.bpsgameserver.com/v3/bgr/Betsson.GR/Common/el/image/2023/02/7b74f7dc191f4fa7b6eb48aca437493f.svg" alt="Kethea"/>
+					</div>
+					<div className='homepage__reassurance__text__container'>
+						<Typography variant='h2' className='homepage__promo__title'>Ασφαλές και υπεύθυνο παιχνίδι</Typography>
+						<Typography variant='body1' className='homepage__reassurance__text'>Μας εμπιστεύονται οι πελάτες μας και οι βασικές ρυθμιστικές αρχές. Θέλουμε οι παίκτες να απολαμβάνουν τις υπηρεσίες μας. Αυτός είναι ο λόγος για τον οποίο προωθούμε το υπεύθυνο παιχνίδι, διαθέτουμε μια σειρά εργαλείων για αυτόν τον σκοπό και είμαστε πάντοτε έτοιμοι να υποστηρίξουμε τους παίκτες μας.</Typography>
+						<Typography variant='body1' className='homepage__reassurance__link'>Ανακαλύψτε περισσότερα σχετικά με το Υπεύθυνο Παιχνίδι</Typography>
+						
 					</div>
 
 				</div>
