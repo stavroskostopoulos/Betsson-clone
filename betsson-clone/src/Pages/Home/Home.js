@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
 
+import './Home.css';
+
 //custom Hooks
 import useFetch from '../../Components/Hooks/useFetch';
 
-import './Home.css';
 
 // Import media
 
@@ -33,10 +34,15 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import ErrorIcon from '@mui/icons-material/Error';
 import Tooltip from '@mui/material/Tooltip';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 // Import custom Components
 import CardWithInfo from '../../Components/Common/CardWithInfo/CardWithInfo';
 import CardWithTitleProvider from '../../Components/Common/CardWithTitleProvider/CardWithTitleProvider';
+import Accordion from '../../Components/Layout/Accordion/Accordion';
+
+//import constant data
+import accordionData from '../../Assets/Constants/accordionData';
 
 const textfieldStyling = {
 	'& label.Mui-focused': {
@@ -324,6 +330,33 @@ function Home() {
 						
 					</div>
 
+				</div>
+
+				<div className='homepage__accordions__container'>
+					<Typography variant='h2' className='homepage__promo__title'>Συχνές ερωτήσεις</Typography>
+					<div className='homepage__accordions__wrapper'>
+						{accordionData.map((item, index) => (
+							<Accordion key={index} title={item.title} content={item.content} />
+						))}
+					</div>
+				</div>
+
+				<div className='homepage__greece__article__container'>
+					<div className='homepage__greece__article__content__wrapper'>
+						<Typography variant='h2' className='homepage__promo__title'>H BETSSON ΗΡΘΕ ΣΤΗΝ ΕΛΛΑΔΑ ΚΑΙ ΠΑΙΖΕΙ ΣΤΟ 100%</Typography>
+						<Typography variant='body1' className='homepage__greece__article__text'>Προερχόμενη από την Σουηδία και υπό την σκεπή της Betsson ΑΒ, η οποία αποτελεί ένα παγκόσμιο όμιλο με παρουσία σε πάνω από 20 χώρες και είναι εισηγμένη από το 2000 στο Χρηματιστήριο της Στοκχόλμης, έχει ως απόλυτο στόχο να προσφέρει 100% Διασκέδαση!</Typography>
+						<Typography variant='body1' className='homepage__greece__article__text'>Η Betsson σου προσφέρει ανταγωνιστικές αποδόσεις και πάρα πολλές επιλογές κατά την πλοήγησή σου στην ιστοσελίδα της. Είναι δίπλα σου, παρέχοντας ασφαλές περιβάλλον στις συναλλαγές και άμεση εξυπηρέτηση σε ό,τι σε απασχολεί.</Typography>
+						<Typography variant='body1' className='homepage__greece__article__text homepage__greece__article__text__bold'>ΣΤΗΝ BETSSON ΠΑΙΖΕΙΣ ΣΤΟ 100%</Typography>
+						<div className='homepage__greece__article__text__with__icon__wrapper'>
+							<Typography variant='body1' className='homepage__greece__article__text homepage__greece__article__text__bold homepage__greece__article__text__expand'>Εμφάνιση Περισσότερων</Typography>
+							<ExpandMoreIcon className='homepage__greece__article__expand__icon'/>
+						</div>
+					</div>
+					
+					<div className='homepage__greece__article__image__container'>
+						<img src="https://cdnroute.bpsgameserver.com/v3/bgr/Betsson.GR/Common/el/image/2023/04/general.seo-section-desktop.png"></img>
+					</div>
+						
 				</div>
 				
 
