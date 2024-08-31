@@ -203,7 +203,8 @@
 .homepage__casino__cards__container, 
 .homepage__live__casino__cards__container, 
 .homepage__betting__cards__container,
-.homepage__pros__cards__container {
+.homepage__pros__cards__container,
+.homepage__accordions__container {
     padding: 16px 0px !important;
 
     display: flex;
@@ -371,4 +372,52 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.homepage__accordions__container {
+
+
+    padding: 16px 0px !important;
+}
+
+.homepage__greece__article__container {
+    padding: 32px 0px !important;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    align-items: center;
+}
+
+.homepage__greece__article__content__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.homepage__greece__article__text {
+    color: #212121;
+
+    font-size: 16px !important;
+    font-family: 'Open Sans', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+}
+
+.homepage__greece__article__text__bold {
+    font-weight: 700 !important;
+}
+
+.homepage__greece__article__text__with__icon__wrapper {
+    color: #ff6600 !important;
+
+    display: flex;
+}
+
+.homepage__greece__article__text__expand {
+    color: #ff6600 !important;
+}
+
+.homepage__greece__article__image__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
