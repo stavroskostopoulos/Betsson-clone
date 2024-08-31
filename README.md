@@ -10,4 +10,4 @@ This is a personal project where I developed a React application to clone the [B
 - **HTTP Requests:** Implemented RESTful API calls using the [Axios HTTP client](https://github.com/axios/axios) to fetch dummy data for practicing asynchronous data fetching and state management in React.
 - **Custom Hooks:** Developed a custom `useFetch` hook to handle data fetching in a reusable manner across different components.
 
-
+![Betsson Clone Screenshot](./BetssonCloneScreenshot.png)
